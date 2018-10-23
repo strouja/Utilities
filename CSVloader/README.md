@@ -1,13 +1,15 @@
-Steps to running the csvloader
+Steps to running the csvloader . 
 
-1. Download the csvloader wrapper script. 'csvloader' from Github
-  https://raw.githubusercontent.com/IBMProjectEventStore/Utilities/master/CSVloader/csvloader
-2. Download the csvloader jar from maven
-3. Run the csvloader wrapper script './csvloader'
-Required Arguments:
---user <DB2 Eventstore User>
---connstring <Connection String to eventstore>
---filename <CSV file>
---dbname <DB2 Eventstore Database Name>
---tablename <DB2 Eventstore Table Name>
+1. Download the csvloader wrapper script. 'csvloader' from Github . 
+  https://raw.githubusercontent.com/IBMProjectEventStore/Utilities/master/CSVloader/csvloader . 
+2. Download the csvloader jar from maven . 
+3. Run the csvloader wrapper script './csvloader' . 
+Required Arguments:  
+--user <DB2 Eventstore User> . 
+--connstring <Connection String to eventstore> . 
+--filename <CSV file> . 
+--dbname <DB2 Eventstore Database Name> . 
+--tablename <DB2 Eventstore Table Name> . 
 
+Example:  
+  ./csvloader --user admin --connstring localhost:5555 --filename example.csv --dbname TESTDB --tablename TEST_TABLE . 
