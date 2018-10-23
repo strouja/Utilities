@@ -1,6 +1,7 @@
 Steps to running the csvloader
 
 1. Download the csvloader wrapper script. 'csvloader' from Github
+  https://raw.githubusercontent.com/IBMProjectEventStore/Utilities/master/CSVloader/csvloader
 2. Download the csvloader jar from maven
 3. Run the csvloader wrapper script './csvloader'
 Required Arguments:
