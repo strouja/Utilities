@@ -1,0 +1,16 @@
+err=false
+if [[ $(java -version 2>&1) != *"version"* ]]; then 
+    echo "Java not found. Please install Java before continuing." 
+    err = true
+fi
+
+
+if [ ! -f ./es-csvloader.jar ]; then
+    echo "es-csvloader.jar missing. Please place the jar in the same directory as this script or check if it is named correctly"
+    err=true
+fi
+
+if [ "$err" = true ]; then
+    exit 1
+fi
+java -jar es-csvloader.jar $@
