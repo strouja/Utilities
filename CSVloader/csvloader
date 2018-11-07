@@ -5,12 +5,14 @@ if [[ $(java -version 2>&1) != *"version"* ]]; then
 fi
 
 
-if [ ! -f ./es-csvloader.jar ]; then
-    echo "es-csvloader.jar missing. Please place the jar in the same directory as this script or check if it is named correctly"
-    err=true
+matches=$(ls -1q es-csvloader-*.jar 2>/dev/null | wc -l)
+
+
+if [ "$matches" -ne 1 ]; then 
+    echo "Multiple or no csvloader jars found." 
+    exit 1  
 fi
 
-if [ "$err" = true ]; then
-    exit 1
-fi
-java -jar es-csvloader.jar $@
+for file in es-csvloader*.jar; do
+    java -jar $file $@
+done
